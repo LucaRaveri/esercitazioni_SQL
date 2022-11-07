@@ -1,8 +1,5 @@
 USE uni_db;
 
-SELECT * FROM Corsi;
-SELECT * FROM Esami;
-
 -- Quali prof. hanno una media voti più bassa del normale agli esami?
 
 -- Professori e media
