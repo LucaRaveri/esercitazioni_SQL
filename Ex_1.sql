@@ -1,23 +1,14 @@
 USE uni_db;
 
-SELECT * FROM Studenti;
-SELECT * FROM Corsi;
-SELECT * FROM Professori;
-SELECT * FROM Esami;
-
--- Elencare tutte le ragazze iscritte ad ingegneria
-SELECT * FROM Studenti
-WHERE matricola LIKE 'IN%' AND genere = 'F';
+-- Quanti sono i ragazzi iscritti ad Ingegneria?
+SELECT COUNT(cf) AS Count_M
+FROM Studenti
+WHERE matricola LIKE 'IN%' AND genere = 'M';
 
 -- Quante sono le ragazze iscritte ad ingegneria?
 SELECT COUNT(cf) AS Count_F
 FROM Studenti
 WHERE matricola LIKE 'IN%' AND genere = 'F';
-
--- Quanti sono i ragazzi iscritti ad Ingegneria?
-SELECT COUNT(cf) AS Count_M
-FROM Studenti
-WHERE matricola LIKE 'IN%' AND genere = 'M';
 
 -- Quanti studenti hanno preso una lode negli esami del prof. De Lorenzo?
 SELECT COUNT(DISTINCT Esami.studente) AS studenti_lode_delor
