@@ -1,16 +1,5 @@
 USE uni_db;
 
-SELECT * FROM Studenti;
-SELECT * FROM Corsi;
-SELECT * FROM Professori;
-SELECT * FROM Esami;
-
-SELECT *
-FROM Studenti
-INNER JOIN Esami
-ON Esami.studente = Studenti.matricola
-WHERE Studenti.cognome = "Nadizar";
-
 -- Studenti / lodi
 SELECT Studenti.nome, Studenti.cognome, Esami.corso, Esami.lode
 FROM Esami
